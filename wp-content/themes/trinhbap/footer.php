@@ -103,7 +103,9 @@
                 <h4 class="modal-title">YÊU CẦU BÁO GIÁ</h4>
             </div>
             <p style="font-size: 0.875rem;  margin-bottom: 10px; padding: 10px 15px 0px 15px;">
-                Chào anh chị, Để nhận được "BÁO GIÁ ĐẶC BIỆT" từ <?php echo get_option('contact_fullname'); ?>, anh chị hãy liên hệ ngay qua Hotline:
+                Chào anh chị, Để nhận được "BÁO GIÁ ĐẶC BIỆT" từ <?php echo get_option('contact_fullname'); ?>
+                , anh chị hãy liên hệ ngay qua
+                Hotline:
                 <strong>
                     <a href="tel:<?php echo get_option('contact_hotline'); ?>" style="color: #f00; font-size: 1rem;">
                         <?php echo get_option('contact_hotline'); ?>
@@ -111,16 +113,23 @@
                 </strong>
                 hoặc điền form báo giá bên dưới. Xin cảm ơn!
             </p>
-            <form method="post" role="form" id="frm-contact-v2">
+            <form action="<?php echo bloginfo('url'); ?>#wpcf7-f171-o1" method="post" role="form" id="frm-contact-v2">
+                <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="171">
+                    <input type="hidden" name="_wpcf7_version" value="5.0.3">
+                    <input type="hidden" name="_wpcf7_locale" value="vi">
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f171-o1">
+                    <input type="hidden" name="_wpcf7_container_post" value="0">
+                </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input data-val="true" data-val-required="Bạn vui lòng nhập họ tên đầy đủ" id="FullName" name="FullName" placeholder="Họ và tên" type="text" value=""/>
+                        <input name="Ho-Va-Ten" data-val="true" id="FullName" data-val-required="Bạn vui lòng nhập họ tên đầy đủ" id="FullName" placeholder="Họ và tên" type="text" value=""/>
                         <span><span class="field-validation-valid" data-valmsg-for="FullName" data-valmsg-replace="true"></span></span>
                     </div>
                     <div class="input-field col s6">
                         <div class="select-wrapper material-select">
                             <input name="Description" type="hidden" value=""/>
-                            <select name="car" class="material-select initialized" id="pop_car">
+                            <select name="San-Pham" class="material-select initialized" id="pop_car">
                                 <option></option>
                                 <option value="Chevrolet Spark Duo">Chevrolet Spark Duo</option>
                                 <option value="Spark Van 2018">Spark Van 2018</option>
@@ -132,16 +141,16 @@
                         <div class="radio-group">
                             <p>Hình thức thanh toán</p>
                             <p>
-                                <input id="pop_payany" class="with-gap" name="pay" value="Trả góp" type="radio" checked="">
-                                <label for="pop_payany">Trả góp</label>
-                                <input id="pop_payall" class="with-gap" name="pay" value="Trả hết" type="radio">
+                                <input name="Hinh-Thuc-Thanh-Toan" id="pay1" class="with-gap" value="Trả góp" type="radio" checked="">
+                                <label for="pay1">Trả góp</label>
+                                <input name="Hinh-Thuc-Thanh-Toan" id="pop_payall" class="with-gap" value="Trả hết" type="radio">
                                 <label for="pop_payall">Trả hết</label>
                             </p>
                         </div>
                     </div>
                     <div class="input-field col s12">
                         <div class="select-wrapper material-select">
-                            <select name="address" class="material-select initialized" id="drive_address" style="width: 100%;">
+                            <select name="Khu-Vuc" class="material-select initialized" style="width: 100%;" id="drive_address">
                                 <option></option>
                                 <option value="Hà Nội">Hà Nội</option>
                                 <option value="Hải Phòng">Hải Phòng</option>
@@ -172,13 +181,13 @@
                         <label for="drive_address">Chọn khu vực</label>
                     </div>
                     <div class="input-field col s12">
-                        <input data-val="true" data-val-required="Bạn vui lòng nhập số điện thoại" name="Phone" placeholder="Điện thoại" type="text" value=""/>
+                        <input data-val="true" data-val-required="Bạn vui lòng nhập số điện thoại" name="So-Dien-Thoai" placeholder="Điện thoại" type="text" value="" id="Phone"/>
                         <span>
                             <span class="field-validation-valid" data-valmsg-for="Phone" data-valmsg-replace="true"></span>
                         </span>
                     </div>
                     <div class="input-field col s12">
-                        <input data-val="true" data-val-regex="Email không đúng định dạng" data-val-regex-pattern="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$" data-val-required="Bạn vui lòng nhập email" name="Email" placeholder="Email" type="text" value=""/>
+                        <input id="Email" data-val="true" data-val-regex="Email không đúng định dạng" data-val-regex-pattern="^(([A-Za-z0-9]+_+)|([A-Za-z0-9]+\-+)|([A-Za-z0-9]+\.+)|([A-Za-z0-9]+\++))*[A-Za-z0-9]+@((\w+\-+)|(\w+\.))*\w{1,63}\.[a-zA-Z]{2,6}$" data-val-required="Bạn vui lòng nhập email" name="Email" placeholder="Email" type="text" value=""/>
                         <span>
                             <span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
                         </span>
@@ -215,29 +224,8 @@
 
         var result = $('#frm-contact-v2').valid();
         if (result) {
-            var obj = {
-                FullName: $('#modal-quotation-v2 #FullName').val(),
-                Address: $('#modal-quotation-v2 #Address').val(),
-                Description: $('#modal-quotation-v2 #Description').val(),
-                Email: $('#modal-quotation-v2 #Email').val(),
-                Phone: $('#modal-quotation-v2 #Phone').val(),
-                Type: 1
-            };
-            $.ajax({
-                url: '/Desktop/Home/SendContact',
-                type: 'POST',
-                data: obj,
-                success: function (data) {
-                    SendEmailContactSuccess(data);
-                },
-                beforeSend: function () {
-                    ShowLoading();
-                },
-                complete: function () {
-                    HideLoading();
-                }
-            });
-            return true;
+            $('#frm-contact-v2').submit();
+            SendEmailContactSuccess(1);
         }
         return false;
     }
@@ -264,7 +252,8 @@
                 <h4 class="modal-title">ƯỚC TÍNH TRẢ GÓP</h4>
             </div>
             <p style="font-size: 0.875rem;  margin-bottom: 10px; padding: 10px 15px 0px 15px;">
-                Chào anh chị, Để nhận được "MỨC TRẢ GÓP TỐT NHẤT VÀ LÃI SUẤT THẤP" khi mua xe, hãy liên hệ ngay <?php echo get_option('contact_fullname'); ?> qua số:
+                Chào anh chị, Để nhận được "MỨC TRẢ GÓP TỐT NHẤT VÀ LÃI SUẤT THẤP" khi mua xe, hãy liên hệ ngay <?php echo get_option('contact_fullname'); ?>
+                qua số:
                 <strong>
                     <a href="tel:<?php echo get_option('contact_hotline'); ?>" style="color: #f00; font-size: 1rem;"><?php echo get_option('contact_hotline'); ?></a>
                 </strong>
@@ -281,12 +270,8 @@
                             <input id="Description" name="Description" type="hidden" value=""/>
                             <select id="pop_car" name="car" class="material-select initialized">
                                 <option></option>
-
-
                                 <option value="Chevrolet Spark Duo">Chevrolet Spark Duo</option>
-
-
-
+                                <option value="Spark Van 2018">Spark Van 2018</option>
                             </select>
                         </div>
                         <label for="pop_car">Chọn dòng xe</label>
@@ -426,7 +411,7 @@
             </div>
             <p style="font-size: 0.875rem;  margin-bottom: 10px; padding: 10px 15px 0px 15px;">
                 Chào anh chị, Để nhận được chi phí lăn bánh xe Chevrolet MIỄN PHÍ từ <?php echo get_option('contact_fullname'); ?>
-                - <?php echo get_option('general_campany'); ?>, hãy liên hệ Ngay <?php echo get_option('contact_fullname'); ?>
+                - Chevrolet Thăng Long, hãy liên hệ Ngay <?php echo get_option('contact_fullname'); ?>
                 qua số:
                 <strong>
                     <a href="tel:<?php echo get_option('contact_hotline'); ?>" style="color: #f00; font-size: 1rem;"><?php echo get_option('contact_hotline'); ?></a>
@@ -444,14 +429,8 @@
                             <input id="Description" name="Description" type="hidden" value=""/>
                             <select id="pop_car" name="car" class="material-select initialized" style="width: 100%;">
                                 <option></option>
-
-
-
-
                                 <option value="Chevrolet Spark Duo">Chevrolet Spark Duo</option>
-
-
-
+                                <option value="Spark Van 2018">Spark Van 2018</option>
                             </select>
                         </div>
                         <label for="pop_car">Chọn dòng xe</label>
@@ -571,7 +550,7 @@
             </div>
             <p style="font-size: 0.875rem; margin-bottom: 10px; padding: 10px 15px 0px 15px;">
                 Chào anh chị, Để trải nghiệm xe Chevrolet MIỄN PHÍ từ <?php echo get_option('contact_fullname'); ?>
-                - <?php echo get_option('general_company'); ?>, hãy liên hệ Ngay <?php echo get_option('contact_fullname'); ?>
+                - Chevrolet Thăng Long, hãy liên hệ Ngay <?php echo get_option('contact_fullname'); ?>
                 qua số:
                 <strong>
                     <a href="tel:<?php echo get_option('contact_hotline'); ?>" style="color: #f00; font-size: 1rem;"><?php echo get_option('contact_hotline'); ?></a>
@@ -589,14 +568,8 @@
                             <input id="Description" name="Description" type="hidden" value=""/>
                             <select id="pop_car" name="car" class="material-select initialized">
                                 <option></option>
-
-
-
                                 <option value="Chevrolet Spark Duo">Chevrolet Spark Duo</option>
-
-
-
-
+                                <option value="Spark Van 2018">Spark Van 2018</option>
                             </select>
                         </div>
                         <label for="pop_car">Chọn dòng xe</label>

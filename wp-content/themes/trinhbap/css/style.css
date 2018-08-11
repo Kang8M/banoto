@@ -758,7 +758,7 @@ footer about us
 }
 
 .footer-about-us .logo {
-    margin-bottom: 1.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .footer-about-us .logo img {
@@ -1531,4 +1531,37 @@ body iframe[name="google_conversion_frame"] {
     display: inline !important;
     padding: 0 !important;
     margin: 0 !important;
+}
+
+.blog-pagenat-wthree {
+    width: 100%;
+    float: left;
+    margin-top: 0px !important;
+    margin-bottom: 30px;
+    padding: 0px 15px;
+}
+
+.blog-pagenat-wthree ul {
+    margin: 0px;
+    float: right;
+}
+
+.blog-pagenat-wthree ul li {
+    list-style: none;
+    float: left;
+    margin: 0px;
+    margin-left: 5px;
+}
+
+.blog-pagenat-wthree ul li a {
+    padding: 5px 10px;
+    background: #232628;
+    border-radius: 2px;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.blog-pagenat-wthree ul li.disabled a{
+    background: #c38404;
 }
