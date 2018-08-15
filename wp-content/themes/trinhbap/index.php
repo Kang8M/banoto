@@ -90,7 +90,9 @@ $idPage = get_the_ID();
                     query_posts(
                         array(
                             'post_type' => array('phienban'),
-                            'posts_per_page' => 12
+                            'posts_per_page' => 12,
+                            'orderBy' => 'ID',
+                            'order' => 'ASC'
                         )
                     );
                     if (have_posts()) {

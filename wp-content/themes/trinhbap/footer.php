@@ -32,8 +32,8 @@
                     <?php
                         query_posts(
                             array(
-                                'post_type' => array('sanpham'),
-                                'posts_per_page' => 5
+                                'post_type' => array('phienban'),
+                                'posts_per_page' => 12
                             )
                         );
                         if (have_posts()) {
