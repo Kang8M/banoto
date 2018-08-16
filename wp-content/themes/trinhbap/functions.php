@@ -304,7 +304,7 @@ function laySanPhamTrongPhienBan($idPhienBan)
     $querystr = "select post_id from wp_postmeta where meta_key = 'phien_ban' and meta_value = " . $idPhienBan;
     global $wpdb;
     $pageposts = $wpdb->get_results($querystr, OBJECT);
-    foreach($pageposts as $item) {
+    foreach ($pageposts as $item) {
         $listID[] = $item->post_id;
     }
     return $listID;
