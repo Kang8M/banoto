@@ -309,3 +309,10 @@ function laySanPhamTrongPhienBan($idPhienBan)
     }
     return $listID;
 }
+
+function bm_excerpt_more_link($more) {
+    $post = get_post();
+    return '...';
+}
+add_filter( 'excerpt_more', 'bm_excerpt_more_link', 21 );
+remove_filter('the_excerpt', 'wpautop');
