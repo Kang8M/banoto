@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7f0bad3-088c-4bf0-bd18-6fa477c5c055" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/trinhbap/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/trinhbap/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/trinhbap/functions.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/trinhbap/functions.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/trinhbap/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/trinhbap/header.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wp-content/themes/trinhbap/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/wp-content/themes/trinhbap/index.php" afterDir="false" />
-    </list>
+    <list default="true" id="c7f0bad3-088c-4bf0-bd18-6fa477c5c055" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -208,8 +202,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="1" />
+    <option name="x" value="-1390" />
+    <option name="y" value="56" />
     <option name="width" value="1378" />
     <option name="height" value="733" />
   </component>
@@ -325,15 +319,15 @@
       <workItem from="1534335066211" duration="1986000" />
       <workItem from="1534354108764" duration="11647000" />
       <workItem from="1534705196501" duration="1216000" />
-      <workItem from="1535057696159" duration="10700000" />
+      <workItem from="1535057696159" duration="11299000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26500000" />
+    <option name="totallyTimeSpent" value="27099000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
